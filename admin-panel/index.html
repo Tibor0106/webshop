@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Computer Webshop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/Main.css">
+    <link rel="shortcut icon" href="../assets/media/ico.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <style>
+        .input-group {
+            width: 400px;
+        }
+
+        body {
+            background-color: #8D5EFB;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DDDA9F'/%3E%3Cstop offset='1' stop-color='%238D5EFB'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%234D4C16' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%234D4C16' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <header>
+        <div class="d-flex justify-content-center mt-5">
+            <div class="">
+                <img src=" ../assets/media/logo.png" alt="" class="">
+                <h5 class="text-center text-light">Webshop kezelő rendszer</h5>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="login p-4">
+                <div class="d-flex justify-content-center">
+                    <div class="d">
+                        <label for="" class="text-uppercase" style="font-weight:  bold;">Username</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control ms-2" id="username">
+                        </div>
+                        <label for="" class="text-uppercase" style="font-weight:  bold;">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control ms-2" id="password">
+                        </div>
+                        <p class="mb-4 text-center text-danger mt-2" id="authError"></p>
+                        <div class="input-group">
+                            <button class="btn-product btn form-control ms-2"
+                                onclick="loginBtn()">Bejelentkezés</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="../assets/javascript/Main.js"></script>
+    <script src="../assets/javascript/PicManager.js"></script>
+    <script src="../assets/javascript/Auth.js"></script>
+</body>
+</body>
+
+</html>

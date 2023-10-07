@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Computer Webshop / Szervíz</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/Main.css">
+    <link rel="shortcut icon" href="../assets/media/ico.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="customNavBar">
+            <p class="brand">
+                <img src="../assets/media/logo.png" alt="" width="200" height="200" class="img-fluid logo">
+            </p>
+            <div class="container ms-xl-5">
+
+                <div class="nav-list d-xl-block d-none">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <ul class="d-flex">
+                            <li class="nav-link" onclick="NavHref('../')">Home</li>
+                            <li class="nav-link active" onclick="NavHref('')">Szervíz</li>
+                            <li class="nav-link" onclick="NavHref('../contact')">Kapcsolat</li>
+                            <li class="nav-link" onclick="NavHref('')">GYIK</li>
+                            <li class="nav-link" onclick="NavHref('')">Rendelés</li>
+                            <li class="ms-xl-5">
+                                <div class="input-group d-flex justify-content-center">
+                                    <input type="text" class="form-check form-control" style="max-width: 250px;" name=""
+                                        id="" placeholder="Keresés">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-end ms-xl-5">
+                            <div class="ms-xl-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-cart3 text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                <span class="cart-count" id="cart-count">...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="d-xl-none d-block">open</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h3 class="text-center mb-3"> 🛠️ Szervíz</h3>
+            <p class="text-center">Kérlek részletezd a hibát, írj nekünk és hamarosan megkeresünk a további
+                részletekkel.</p>
+            <div class="service d-flex justify-content-center">
+                <div class="p-3 mt-3">
+                    <label for="" class="">Név</label>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control ms-2" id="name" placeholder="Paragh Tibor">
+                    </div>
+                    <label for="" class="">Telefon</label>
+                    <div class="input-group mb-4">
+                        <input type="number" class="form-control ms-2" id="phone" placeholder="3630XXXXXXX">
+                    </div>
+                    <label for="" class="">Email</label>
+                    <div class="input-group mb-4">
+                        <input type="email" class="form-control ms-2 " id="email" placeholder="minta@gmail.com">
+                    </div>
+                    <label for="" class="">Probléma</label>
+                    <div class="input-group mb-4">
+                        <textarea class="form-control ms-2" id="problem"> </textarea>
+                    </div>
+                    <p class="" id="message"></p>
+                    <div class="input-group">
+                        <button class="btn btn-product form-control mb-3" onclick="send()">Küldés</button>
+                    </div>
+                </div>
+                <div class="mt-5 p-3">
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="../assets/javascript/Main.js"></script>
+    <script src="../assets/javascript/CartMamanger.js"></script>
+    <script src="../assets/javascript/Service.js"></script>
+</body>
+</body>
+
+</html>

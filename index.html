@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Computer Webshop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/Main.css">
+    <link rel="shortcut icon" href="assets/media/ico.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="customNavBar">
+            <p class="brand">
+                <img src="assets/media/logo.png" alt="" width="200" height="200" class="img-fluid logo">
+            </p>
+            <div class="container ms-xl-5">
+
+                <div class="nav-list d-xl-block d-none">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <div class="d-sm-block d-none ms-xl-5">
+                            <br>
+                        </div>
+                        <ul class="d-flex">
+                            <li class="nav-link active" onclick="NavHref('')">Home</li>
+                            <li class="nav-link" onclick="NavHref('/service')">Szervíz</li>
+                            <li class="nav-link" onclick="NavHref('/contact')">Kapcsolat</li>
+                            <li class="nav-link" onclick="NavHref('/gyik')">GYIK</li>
+                            <li class="nav-link" onclick="NavHref('')">Rendelés</li>
+                            <li class="ms-xl-5">
+                                <div class="input-group d-flex justify-content-center">
+                                    <input type="text" class="form-check form-control" style="max-width: 250px;" name=""
+                                        id="" placeholder="Keresés">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-end ms-xl-5">
+                            <div class="ms-xl-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-cart3 text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                <span class="cart-count" id="cart-count">...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="d-xl-none d-block">open</button>
+        </div>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="categorys">
+                    <h5 class="h5 text-center">Katekóriák:</h5>
+                    <div style="border: 2px solid rgba(93, 93, 93, 0.847); border-radius: 50px;" class="mb-4"></div>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <div class="category-item d-flex">
+                                <div class="logo me-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-plug" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0zM5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4H5z" />
+                                    </svg>
+                                </div>
+                                <p>Kábelek</p>
+                            </div>
+
+                            <div class="category-item d-flex">
+                                <div class="logo me-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-mouse2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z" />
+                                    </svg>
+                                </div>
+                                <p>Egerek</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h3 class="text-center"> 📢 Napi ajánlat</h3>
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-xl-4  mb-3">
+                            <div class="product-card mt-5">
+                                <img src="https://imagedelivery.net/pjXEwQ5mgCM0WtJa4WheRQ/213ee331-6bcf-4839-5a05-ba4b7e1e3f00/ProductViewThumb"
+                                    alt="IndexKep" srcset="" class="img-fluid">
+                                <div class="line ms-md-5 me-md-5 mt-3 mb-3"></div>
+                                <h5 class="p-title text-center">PC</h5>
+                                <p class="text-black-50 text-center mt-3">lore</p>
+                                <div class="input-group mt-3">
+                                    <button class="btn-product me-3 ms-3 form-control"
+                                        onclick="cart.addToCart('1')">Kosárba</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-alert" id="alert">zsresrsrsers</div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="assets/javascript/Main.js"></script>
+    <script src="assets/javascript/PicManager.js"></script>
+    <script src="assets/javascript/CartMamanger.js"></script>
+</body>
+</body>
+
+</html>
