@@ -25,11 +25,11 @@
             <div class="col-6 col-md-1">
                 <div class="sidebar" id="side-bar" onmouseover="sideBarOpen()" onmouseleave="sideBarClose()">
                     <div class="items text-center">
-                        <h4 class="text-light" id="sideTitle">Dashboard</h4>
+                        <h4 class="text-light" id="sideTitle">Termékek</h4>
                         <div class="line-black ms-2 me-2 mt-3 mb-5"></div>
                         <ul>
                             <li class="sideItem mb-4">
-                                <div class="icon d-flex justify-content-center">
+                                <div class="icon d-flex justify-content-center" onclick="NavHref('../dashboard')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-speedometer2 Sideicon" style="margin-left: -28px;"
                                         viewBox="0 0 16 16">
@@ -44,7 +44,7 @@
                             </li>
 
                             <li class="sideItem mb-4">
-                                <div class="icon d-flex justify-content-center" onclick="NavHref('../termekek')">
+                                <div class="icon d-flex justify-content-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-bag-fill Sideicon" style="margin-left: -28px;" viewBox="0 0 16 16">
                                         <path
@@ -72,30 +72,60 @@
             </div>
             <div class="col col-md mt-5">
                 <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-sm col-md-5 mb-3">
-                            <div class="cCard p-4">
-                                <h5> Aktív megrendelések: </h5>
-                                <p class="h3 text-success ms-3" id="activeOrders">Betöltés...</p>
+                    <div class="cCard p-4 mb-5">
+                        <h5 class="mb-3 h5">Termék feltöltése:</h5>
+                        <div class="mt-5"></div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">termék megnevezése</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control ms-3" id="pName">
+                        </div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">termék leírása</label>
+                        <div class="input-group mb-3">
+                            <textarea type="text" class="form-control ms-3" id="pSubtitle"> </textarea>
+                        </div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">termék ára</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control ms-3" id="pPrice">
+                        </div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">kategória</label>
+                        <div class="input-group mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-product dropdown-toggle form-control ms-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="puploadSetcat">
+                                    Válassz kategóriát!
+                                </button>
+                                <ul class="dropdown-menu " id="catergoryList">
+
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-sm col-md-5 mb-3">
-                            <div class="cCard p-4">
-                                <h5>Szervíz üzenetek: </h5>
-                                <p class="h3 text-success ms-3" id="serviceMessages">Betöltés...</p>
-                            </div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">Kép</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control ms-3" id="pImg">
                         </div>
-                        <div class="col-sm col-md-5 mb-3">
-                            <div class="cCard p-4">
-                                <h5>Bevétel: </h5>
-                                <p class="h3 text-success ms-3" id="income">Betöltés...</p>
-                            </div>
+                        <p class="pUploadMessage text-center text-warning" id="pUploadMessage"></p>
+                        <div class="input-group">
+                            <button class="btn btn-product form-control mt-4"
+                                onclick="uploadProduct()">Feltöltés</button>
                         </div>
-                        <div class="col-sm col-md-5 mb-3">
-                            <div class="cCard p-4">
-                                <h5>Összes termék: </h5>
-                                <p class="h3 text-success ms-3" id="allProcuct">Betöltés...</p>
-                            </div>
+                    </div>
+                    <div class="cCard p-4 mb-5">
+                        <h5 class="mb-3 h5">Kategória létrehozása:</h5>
+                        <div class="mt-5"></div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">Név</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control ms-3" id="categoryName">
+                        </div>
+                        <label for="" class="text-uppercase mb-1" style="font-weight:  bold;">Ikon (<a
+                                class="text-lowercase" target="_blank" href="https://icons.getbootstrap.com/">Bootstrap
+                                Icons</a>) <label for="" class="text-lowercase">erről az oldalról válassz (illeszd be az
+                                svg kódot)</label></label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control ms-3" id="categorySVG">
+                        </div>
+                        <p class="text-center" id="catemessage"></p>
+                        <div class="input-group">
+                            <button class="btn btn-product form-control mt-4" onclick="insertCat()">Hozzáadás</button>
                         </div>
                     </div>
                 </div>
@@ -115,7 +145,7 @@
         </script>
     <script src="../../assets/javascript/Main.js"></script>
     <script src="../../assets/javascript/Auth.js"></script>
-    <script src="../../assets/javascript/Dashboard.js"></script>
+    <script src="../../assets/javascript/ProductManager.js"></script>
 
 </body>
 </body>

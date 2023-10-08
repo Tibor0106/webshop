@@ -2,11 +2,16 @@ class Auth {
     constructor() {
 
     }
-    checkData() {
+    checkData(data) {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].length === 0) {
+                return false;
+            } else {
+                continue;
+            }
+        }
+        return true;
 
-    }
-    error(message) {
-        document.getElementById("authError").innerHTML = message;
     }
     async isLogined() {
         try {
@@ -40,7 +45,7 @@ class Auth {
         return true;
     }
     login(data) {
-
+        if (!this.checkData(data)) { authError("Minden mező kitöltése kötelező!"); return; }
         $.ajax({
             type: "POST",
             url: "http://webshop10.nhely.hu/api/auth.php",
@@ -51,12 +56,10 @@ class Auth {
                 if (response === "true") {
                     window.location.href = "http://webshop10.nhely.hu/admin-panel/dashboard";
                 } else {
-
+                    authError("Hibás felhasználónév vagy jelszó!")
                 }
             },
         });
-
-
 
     }
 }
@@ -64,6 +67,9 @@ class Auth {
 const auth = new Auth();
 console.log(auth.isLogined());
 auth.checkLogin();
+function authError(message) {
+    document.getElementById("authError").innerHTML = message;
+}
 function loginBtn() {
 
     var username = document.getElementById("username");

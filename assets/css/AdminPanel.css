@@ -1,0 +1,33 @@
+:root {
+    --purple: #8d5efb;
+}
+
+.sidebar {
+    background-color: var(--purple);
+
+    position: fixed;
+    width: 7vh;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    transition: width 0.7s;
+}
+
+.items {
+    color: white;
+    margin-top: 100px;
+
+}
+
+.sideItem {
+    list-style: none;
+    cursor: pointer;
+}
+
+.sideTitle {
+    display: none;
+}
+
+.line-black {
+    border: 1px solid rgb(61, 0, 126);
+    border-radius: 20px;
+}

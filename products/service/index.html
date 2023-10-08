@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Computer Webshop</title>
+    <title>Computer Webshop / Szervíz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,8 +10,8 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/Main.css">
-    <link rel="shortcut icon" href="assets/media/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/Main.css">
+    <link rel="shortcut icon" href="../assets/media/ico.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
@@ -20,7 +20,7 @@
     <header>
         <div class="customNavBar">
             <p class="brand">
-                <img src="assets/media/logo.png" alt="" width="200" height="200" class="img-fluid logo">
+                <img src="../assets/media/logo.png" alt="" width="200" height="200" class="img-fluid logo">
             </p>
             <div class="container ms-xl-5">
 
@@ -39,10 +39,10 @@
                             <br>
                         </div>
                         <ul class="d-flex">
-                            <li class="nav-link active" onclick="NavHref('')">Home</li>
-                            <li class="nav-link" onclick="NavHref('/service')">Szervíz</li>
-                            <li class="nav-link" onclick="NavHref('/contact')">Kapcsolat</li>
-                            <li class="nav-link" onclick="NavHref('/gyik')">GYIK</li>
+                            <li class="nav-link" onclick="NavHref('../')">Home</li>
+                            <li class="nav-link active" onclick="NavHref('')">Szervíz</li>
+                            <li class="nav-link" onclick="NavHref('../contact')">Kapcsolat</li>
+                            <li class="nav-link" onclick="NavHref('')">GYIK</li>
                             <li class="nav-link" onclick="NavHref('')">Rendelés</li>
                             <li class="ms-xl-5">
                                 <div class="input-group d-flex justify-content-center">
@@ -70,30 +70,40 @@
         </div>
     </header>
     <main>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="categorys">
-                    <h5 class="h5 text-center">Kategóriák:</h5>
-                    <div style="border: 2px solid rgba(93, 93, 93, 0.847); border-radius: 50px;" class="mb-4"></div>
-                    <div class="d-flex justify-content-center">
-                        <div id="catergoryDiv">
-                            Betöltés....
-                        </div>
+        <div class="container">
+            <h3 class="text-center mb-3"> 🛠️ Szervíz</h3>
+            <p class="text-center">Kérlek részletezd a hibát, írj nekünk és hamarosan megkeresünk a további
+                részletekkel.</p>
+            <div class="service d-flex justify-content-center">
+                <div class="p-3 mt-3">
+                    <label for="" class="">Név</label>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control ms-2" id="name" placeholder="Paragh Tibor">
+                    </div>
+                    <label for="" class="">Telefon</label>
+                    <div class="input-group mb-4">
+                        <input type="number" class="form-control ms-2" id="phone" placeholder="3630XXXXXXX">
+                    </div>
+                    <label for="" class="">Email</label>
+                    <div class="input-group mb-4">
+                        <input type="email" class="form-control ms-2 " id="email" placeholder="minta@gmail.com">
+                    </div>
+                    <label for="" class="">Probléma</label>
+                    <div class="input-group mb-4">
+                        <textarea class="form-control ms-2" id="problem"> </textarea>
+                    </div>
+                    <p class="" id="message"></p>
+                    <div class="input-group">
+                        <button class="btn btn-product form-control mb-3" onclick="send()">Küldés</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-7">
-                <h3 class="text-center"> 📢 Napi ajánlat</h3>
-                <div class="d-flex justify-content-center">
-                    <div class="row">
+                <div class="mt-5 p-3">
 
-                    </div>
                 </div>
+
             </div>
+
         </div>
-        <div class="custom-alert" id="alert">zsresrsrsers</div>
-
-
     </main>
     <footer>
 
@@ -106,10 +116,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
-    <script src="assets/javascript/Main.js"></script>
-    <script src="assets/javascript/PicManager.js"></script>
-    <script src="assets/javascript/CartMamanger.js"></script>
-    <script src="assets/javascript/category.js"></script>
+    <script src="../assets/javascript/Main.js"></script>
+    <script src="../assets/javascript/CartMamanger.js"></script>
+    <script src="../assets/javascript/Service.js"></script>
 </body>
 </body>
 
