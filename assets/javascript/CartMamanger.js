@@ -2,6 +2,12 @@ class Cart {
     constructor() {
         this.cartCount = 0;
     }
+    setamount(amount) {
+        this.cartCount = amount;
+    }
+    getamount() {
+        return this.cartCount;
+    }
 
     async initialize() {
         try {
@@ -65,24 +71,16 @@ class Cart {
             },
             success: function (data) {
                 this.cartCount = 0;
-                updateCartCountUI();
-                showAlert("A kosár tartalmát sikeresen törölted!");
+                window.location.reload();
             },
         });
+    }
+    removeone() {
+
     }
 }
 
 const cart = new Cart();
 cart.initialize();
 
-$.ajax({
-    type: "POST",
-    url: "http://webshop10.nhely.hu/api/cart.php",
-    data: {
-        getItems: "asd"
-    },
-    success: function (data) {
-        console.log(data);
-    },
-});
 

@@ -52,6 +52,10 @@ function sideBarOpen() {
     document.querySelectorAll(".Sideicon").forEach(i => {
         i.classList.remove("ms-5")
     })
+    document.querySelectorAll(".sidebar .icon").forEach(i => {
+        i.style.justifyContent = "start";
+        i.style.marginLeft = "3vh";
+    })
     sideTitle.innerHTML = sideText;
 }
 function sideBarClose() {
@@ -59,12 +63,34 @@ function sideBarClose() {
     document.querySelectorAll(".sideTitle").forEach(i => {
         i.style.display = "none";
     })
-    document.querySelectorAll(".Sideicon").forEach(i => {
-
+    document.querySelectorAll(".icon").forEach(i => {
+        i.style.justifyContent = "center";
+        i.style.marginLeft = "0vh";
     })
     sideTitle.innerHTML = sideText[0].toUpperCase();
 }
-console.log($("#asd").serialize());
+
+function formatNumber(number, decimalPlaces = 3, thousandsSeparator = '.', decimalSeparator = ',') {
+
+    if (isNaN(number)) {
+        return 'Invalid number';
+    }
+
+    const formattedNumber = number.toFixed(decimalPlaces);
+    const parts = formattedNumber.split('.');
+    const integerPart = parts[0];
+    const decimalPart = parts[1];
+
+
+    const formattedDecimalPart = decimalPart ? decimalSeparator + decimalPart : '';
+    const regex = /(\d)(?=(\d{3})+$)/g;
+    const formattedIntegerPart = integerPart.replace(regex, `$1${thousandsSeparator}`);
+    const formattedResult = formattedIntegerPart + formattedDecimalPart;
+    return formattedResult;
+}
+function viewItem(itemid) {
+    window.location.href = `/view/?id=${itemid}`;
+}
 
 
 

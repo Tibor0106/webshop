@@ -3,7 +3,7 @@ class DashBoard {
 
     }
     statistics() {
-        var activeOrders = document.getElementById("actieOrders");
+        var activeOrders = document.getElementById("activeOrders");
         var serviceMessages = document.getElementById("serviceMessages");
         var income = document.getElementById("income");
         var allProduct = document.getElementById("allProcuct");
@@ -24,6 +24,15 @@ class DashBoard {
                 allProduct.innerHTML = data;
             },
         });
+        $.ajax({
+            type: "POST",
+            url: "http://webshop10.nhely.hu/api/statistics.php",
+            data: { query: "activeOrders" },
+            success: function (data) {
+                activeOrders.innerHTML = data;
+            },
+        });
+
     }
 
 }

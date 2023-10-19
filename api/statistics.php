@@ -2,12 +2,29 @@
 
 function activeOrders()
 {
-    // TODO: Implement activeOrders function
+    require_once "database.php"; // Assumed to contain the database connection logic
+
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT COUNT(id) as amount FROM `orders`";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo $row["amount"];
+        }
+    } else {
+        echo "0";
+    }
+
 }
 
 function serviceMessages()
 {
-    require_once "database.php"; // Assumed to contain the database connection logic
+    require_once "database.php";
 
 
     if ($conn->connect_error) {

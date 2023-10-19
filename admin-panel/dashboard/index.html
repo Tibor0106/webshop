@@ -29,7 +29,7 @@
                         <div class="line-black ms-2 me-2 mt-3 mb-5"></div>
                         <ul>
                             <li class="sideItem mb-4">
-                                <div class="icon d-flex justify-content-center">
+                                <div class="icon d-flex" style="justify-content: center;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-speedometer2 Sideicon" style="margin-left: -28px;"
                                         viewBox="0 0 16 16">
@@ -44,7 +44,8 @@
                             </li>
 
                             <li class="sideItem mb-4">
-                                <div class="icon d-flex justify-content-center" onclick="NavHref('../termekek')">
+                                <div class="icon d-flex" style="justify-content: center;"
+                                    onclick="NavHref('../termekek')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-bag-fill Sideicon" style="margin-left: -28px;" viewBox="0 0 16 16">
                                         <path
@@ -53,9 +54,35 @@
                                     <h5 class="sideTitle" style="margin-top: 3px;">Termékek</h5>
                                 </div>
                             </li>
+                            <li class="sideItem mb-4">
+                                <div class="icon d-flex" style="justify-content: center;"
+                                    onclick="NavHref('../service')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-messenger Sideicon" style="margin-left: -28px;"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+                                    </svg>
+
+                                    <h5 class="sideTitle" style="margin-top: 3px;">Szervíz</h5>
+                                </div>
+                            </li>
+                            <li class="sideItem mb-4">
+                                <div class="icon d-flex " style="justify-content: center;"
+                                    onclick="NavHref('../orders')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-box-fill  Sideicon" viewBox="0 0 16 16"
+                                        style="margin-left: -28px;">
+                                        <path fill-rule="evenodd"
+                                            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001 6.971 2.789Zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z" />
+                                    </svg>
+
+                                    <h5 class="sideTitle" style="margin-top: 3px;">Rendelések</h5>
+                                </div>
+                            </li>
                             <li class="sideItem">
-                                <div class="icon d-flex justify-content-center position-absolute"
-                                    style="bottom: 0; margin-bottom: 6vh; margin-left: 1vh;"
+                                <div class="icon d-flex  position-absolute"
+                                    style="bottom: 0; margin-bottom: 6vh; margin-left: 1vh; justify-content: center;"
                                     onclick="NavHref('../../api/logout.php')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                         class="bi bi-arrow-bar-left Sideicon" style="margin-left: -28px;"

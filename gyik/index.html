@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Computer Webshop</title>
+    <title>MENŐ PC | GYIK</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,17 +43,21 @@
                             <li class="nav-link" onclick="NavHref('../service')">Szervíz</li>
                             <li class="nav-link" onclick="NavHref('../contact')">Kapcsolat</li>
                             <li class="nav-link active" onclick="NavHref('')">GYIK</li>
-                            <li class="nav-link" onclick="NavHref('')">Rendelés</li>
+                            <li class="nav-link" onclick="NavHref('../garancia')">Garancia</li>
                             <li class="ms-xl-5">
                                 <div class="input-group d-flex justify-content-center">
-                                    <input type="text" class="form-check form-control" style="max-width: 250px;" name=""
-                                        id="" placeholder="Keresés">
+                                    <input type="text" class="form-check form-control dropdown-toggle"
+                                        style="max-width: 250px;" placeholder="Keresés" id="search"
+                                        oninput="keres(this.value)" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <ul class="dropdown-menu" id="searchList">
+                                        <li><a class="dropdown-item">Kezdj el gépelni.</a></li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
 
                         <div class="d-flex justify-content-end ms-xl-5">
-                            <div class="ms-xl-5">
+                            <div class="ms-xl-5" style="cursor: pointer;" onclick="NavHref('../cart')">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                     class="bi bi-cart3 text-light" viewBox="0 0 16 16">
                                     <path
@@ -122,9 +126,10 @@
                     <label for="" class="form-label h5">Milyen garancia van a vásárolt termékekre?</label>
                     <div>
                         <p class="ms-3 form-floating">- Termékeinkre garanciát vállalunk, melynek részleteiről a
-                            Garancia és
-                            Visszatérítés menüpontban
-                            olvashat.</p>
+                            <b> <a href="../garancia/">Garancia</a></b>
+                            menüpontban
+                            olvashat.
+                        </p>
                         <div class="container">
                             <div class="line ms-md-5 me-md-5"></div>
                         </div>
@@ -147,6 +152,7 @@
     <script src="../assets/javascript/Main.js"></script>
     <script src="../assets/javascript/PicManager.js"></script>
     <script src="../assets/javascript/CartMamanger.js"></script>
+    <script src="../assets/javascript/search.js"></script>
 </body>
 </body>
 

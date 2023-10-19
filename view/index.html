@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>MENŐ PC | Kapcsolat</title>
+    <title>MENŐ PC | Termékek</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,8 +40,8 @@
                         </div>
                         <ul class="d-flex">
                             <li class="nav-link" onclick="NavHref('../')">Home</li>
-                            <li class="nav-link" onclick="NavHref('../service')">Szervíz</li>
-                            <li class="nav-link active" onclick="NavHref('')">Kapcsolat</li>
+                            <li class="nav-link" onclick="NavHref('')">Szervíz</li>
+                            <li class="nav-link" onclick="NavHref('../contact')">Kapcsolat</li>
                             <li class="nav-link" onclick="NavHref('../gyik')">GYIK</li>
                             <li class="nav-link" onclick="NavHref('../garancia')">Garancia</li>
                             <li class="ms-xl-5">
@@ -73,42 +73,12 @@
             <button class="d-xl-none d-block">open</button>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <h3 class="text-center mb-3"> 🔗 Kapcsolat</h3>
-            <div class="contact p-5 d-flex justify-content-center">
-                <div class="mt-4">
-                    <div class="d-flex mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path
-                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                        </svg>
-                        <h6 class="ms-3">info@menopc.com</h6>
-                    </div>
-
-                    <div class="d-flex mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                        </svg>
-                        <h6 class="ms-3">+ 36 30 123 1234</h6>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-pin-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z" />
-                        </svg>
-                        <h6 class="ms-3">Mátészalka, Kölcsey u. 12, 4700</h6>
-                    </div>
-
-                </div>
-
-
+    <main class="p-5">
+        <div class="container-fluid" id="viewItem"
+            style="background-color: rgba(61, 0, 168, 0.044); padding: 15px; border-radius: 10px;">
+            <div class="d-flex justify-content-center">
+                <div class="loader"></div>
             </div>
-
         </div>
     </main>
     <footer>
@@ -125,6 +95,7 @@
     <script src="../assets/javascript/Main.js"></script>
     <script src="../assets/javascript/CartMamanger.js"></script>
     <script src="../assets/javascript/Service.js"></script>
+    <script src="../assets/javascript/viewItem.js"></script>
     <script src="../assets/javascript/search.js"></script>
 </body>
 </body>
